@@ -1,11 +1,16 @@
 exports = typeof window === 'undefined' ? global : window;
 
 const indexOf = function(arr, item) {
-
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === item) {
+            return i;
+        }
+    }
+    return -1;
 };
 
 const sum = function(arr) {
-
+    return arr.length === 1 ? arr[0] : arr[0] + arraysAnswers.sum(arr.slice(1))
 };
 
 const remove = function(arr, item) {
