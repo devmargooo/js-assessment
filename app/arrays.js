@@ -14,7 +14,11 @@ const sum = function(arr) {
 };
 
 const remove = function(arr, item) {
-
+    let array = [...arr];
+    while (indexOf(array, item) !== -1) {
+        array.splice(indexOf(array, item), 1);
+    }
+    return array;
 };
 
 const removeWithoutCopy = function(arr, item) {
