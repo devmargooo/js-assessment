@@ -64,27 +64,58 @@ const curtail = function(arr) {
 };
 
 const concat = function(arr1, arr2) {
-
+    for (let i = 0; i < arr2.length; i++) {
+        arr1.push(arr2[i]);
+    }
+    return arr1;
 };
 
 const insert = function(arr, item, index) {
-
+    for (let i = arr.length; i > index; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[index] = item;
+    return arr;
 };
 
 const count = function(arr, item) {
-
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === item) {
+            count++;
+        }
+    }
+    return count;
 };
 
 const duplicates = function(arr) {
-
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        const current = arr[i];
+        if (indexOf(result, current) !== -1) {
+            continue;
+        }
+        if (arr.indexOf(current, i+1) !== -1) {
+            result.push(current);
+        }
+    }
+    return result;
 };
 
 const square = function(arr) {
-
+    return arr.map(item => item * item);
 };
 
 const findAllOccurrences = function(arr, target) {
-
+    const result = [];
+    let lastOccurrenceIndex = 0;
+    let occurenceIndex = arr.indexOf(target, lastOccurrenceIndex);
+    while (occurenceIndex !== -1) {
+        result.push(occurenceIndex);
+        lastOccurrenceIndex = occurenceIndex;
+        occurenceIndex = arr.indexOf(target, lastOccurrenceIndex + 1);
+    }
+    return result;
 };
 
 const arraysAnswers = {
