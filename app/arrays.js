@@ -22,23 +22,45 @@ const remove = function(arr, item) {
 };
 
 const removeWithoutCopy = function(arr, item) {
+    let originalPointer = 0, actualPointer = 0;
+    while (originalPointer < arr.length) {
+        if (arr[originalPointer] !== item) {
+            arr[actualPointer] = arr[originalPointer];
+            actualPointer++;
+            originalPointer++;
+            continue;
+        }
+        originalPointer++;
+    }
 
+    arr.splice(actualPointer, 4);
+    return arr;
 };
 
 const append = function(arr, item) {
-
+    arr[arr.length] = item;
+    return arr;
 };
 
 const truncate = function(arr) {
-
+    arr.splice(arr.length - 1);
+    return arr;
 };
 
 const prepend = function(arr, item) {
-
+    for (let i = arr.length; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = item;
+    return arr;
 };
 
 const curtail = function(arr) {
-
+    for (let i = 1; i < arr.length; i++) {
+        arr[i - 1] = arr[i];
+    }
+    arr.splice(arr.length - 1);
+    return arr;
 };
 
 const concat = function(arr1, arr2) {
