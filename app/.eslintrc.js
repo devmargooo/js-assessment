@@ -17,6 +17,7 @@ module.exports = {
     },
     plugins: ["import"],
     rules: {
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "no-console": "off"
     }
 };
