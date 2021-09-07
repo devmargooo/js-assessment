@@ -17,14 +17,21 @@ const reduceString = function(str, amount) {
   return array.join('');
 };
 
+const wordWrap = function(str, cols) {
+
+};
+
+const reverseString = function(str) {
+  let result = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    result.push(str[i]);
+  }
+  return result.join('');
+};
+
+
 exports.stringsAnswers = {
   reduceString,
-
-  wordWrap: function(str, cols) {
-
-  },
-
-  reverseString: function(str) {
-
-  }
+  wordWrap,
+  reverseString
 };
