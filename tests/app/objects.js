@@ -36,11 +36,11 @@ describe('objects and context', function() {
 
   it('you should be able to alter multiple objects at once', function() {
     // define a function for fn so that the following will pass
+    var greeting = 'What\'s up';
+    objectsAnswers.alterObjects(C, greeting);
+
     var obj1 = new C('Rebecca');
     var obj2 = new C('Melissa');
-    var greeting = 'What\'s up';
-
-    objectsAnswers.alterObjects(C, greeting);
 
     expect(obj1.greeting).to.eql(greeting);
     expect(obj2.greeting).to.eql(greeting);
