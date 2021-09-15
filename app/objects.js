@@ -13,6 +13,12 @@ exports.objectsAnswers = {
   },
 
   iterate: function(obj) {
-
+    const res = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        res.push(`${key}: ${obj[key]}`)
+      }
+    }
+    return res;
   }
 };
