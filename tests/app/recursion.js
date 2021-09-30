@@ -79,7 +79,7 @@ describe('permutation', function() {
     [4, 3, 2, 1]
   ];
 
-  it('you should be able to return the permutations of an array', function() {
+  it.skip('you should be able to return the permutations of an array', function() {
     var result = recursionAnswers.permute(arr);
     var resultStrings = _.map(result, function(r) { return r.join(''); });
 
