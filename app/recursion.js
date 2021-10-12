@@ -91,5 +91,3 @@ exports.recursionAnswers = {
         );
     }
 };
-
-console.log("!!!", exports.recursionAnswers.validParentheses(2));

@@ -32,8 +32,8 @@ const removeWithoutCopy = function(arr, item) {
         }
         originalPointer++;
     }
+    arr.splice(actualPointer, arr.length - actualPointer);
 
-    arr.splice(actualPointer, 4);
     return arr;
 };
 
