@@ -29,6 +29,12 @@ exports.numbersAnswers = {
   },
 
   multiply: function(a, b) {
-
+    let rank = 0;
+    let temp = b;
+    while (temp < 1) {
+      temp *= 10;
+      rank++;
+    }
+    return +(a*b).toFixed(rank);
   }
 };

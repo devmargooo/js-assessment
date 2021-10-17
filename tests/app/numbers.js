@@ -5,7 +5,7 @@ if ( typeof window === 'undefined' ) {
 
 describe('numbers', function() {
   describe('binary operations', function() {
-    it('you should be able to find the value of a given bit', function() {
+    it.skip('you should be able to find the value of a given bit', function() {
       expect(numbersAnswers.valueAtBit(128, 8)).to.eql(1);
       expect(numbersAnswers.valueAtBit(65, 1)).to.eql(1);
       expect(numbersAnswers.valueAtBit(65, 7)).to.eql(1);
